@@ -186,7 +186,7 @@ export const MenuItemStyles = css`
         display: none;
     }
 
-    :host([checked="true"] .radio-checked {
+    :host([checked="true"]) .radio-checked {
         position: relative;
         width: 20px;
         height: 20px;
@@ -200,7 +200,7 @@ export const MenuItemStyles = css`
         margin-inline-start: 10px;
     }
 
-    :host([checked="true"] .radio-indicator {
+    :host([checked="true"]) .radio-indicator {
         position: absolute;
         top: 4px;
         left: 4px;
