@@ -26,7 +26,7 @@ export const MenuItemStyles = css`
         outline: none;
         box-sizing: border-box;
         height: calc(${heightNumber} * 1px);
-        grid-template-columns: minmax(60px, auto) 1fr minmax(42px, auto);
+        grid-template-columns: minmax(42px, auto) 1fr minmax(42px, auto);
         grid-template-rows: auto;
         justify-items: center;
         align-items: center;
@@ -93,6 +93,7 @@ export const MenuItemStyles = css`
     .start,
     .end {
         display: flex;
+        justify-content: center;
     }
 
     ::slotted(svg) {
@@ -112,18 +113,16 @@ export const MenuItemStyles = css`
         fill: ${accentForegroundCutRestBehavior.var};
     }
 
-    .start-container {
+    :host(.with-role) .start-container {
         display: grid;
-        grid-template-columns: minmax(33px, auto) 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: minmax(30px, auto) minmax(32px, auto) ;
         align-items: center;
         width: 100%;
         height: 100%;
     }
 
-    .start {
+    :host(.with-role) .start {
         grid-column-start: 2;
-        margin-inline-start: 4px;
     }
 
     :host .checkbox {
