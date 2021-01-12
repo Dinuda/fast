@@ -14,7 +14,7 @@ export const MenuItemTemplate = html<MenuItem>`
         aria-expanded="${x => x.expanded}"
         @keydown="${(x, c) => x.handleMenuItemKeyDown(c.event as KeyboardEvent)}"
         @click="${(x, c) => x.handleMenuItemClick(c.event as MouseEvent)}"
-        class="${x => (x.disabled ? "disabled" : "")} ${x =>
+        class="without-role ${x => (x.disabled ? "disabled" : "")} ${x =>
             x.expanded ? "expanded" : ""}"
     >
         <div part="start-container" class="start-container">

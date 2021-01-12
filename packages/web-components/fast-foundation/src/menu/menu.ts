@@ -143,6 +143,7 @@ export class Menu extends FASTElement {
                 this.menuItems[item].setAttribute("tabindex", "0");
             }
             if (hasRole) {
+                this.menuItems[item].classList.remove("without-role");
                 this.menuItems[item].classList.add("with-role");
             }
 
