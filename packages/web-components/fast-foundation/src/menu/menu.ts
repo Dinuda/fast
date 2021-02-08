@@ -129,9 +129,6 @@ export class Menu extends FASTElement {
 
     private setItems = (): void => {
         const focusIndex = this.menuItems.findIndex(this.isFocusableElement);
-        const hasRole =
-            this.querySelectorAll("[role=menuitemcheckbox], [role=menuitemradio]")
-                .length > 0;
 
         // if our focus index is not -1 we have items
         if (focusIndex !== -1) {
@@ -141,10 +138,6 @@ export class Menu extends FASTElement {
         for (let item: number = 0; item < this.menuItems.length; item++) {
             if (item === focusIndex) {
                 this.menuItems[item].setAttribute("tabindex", "0");
-            }
-            if (hasRole) {
-                this.menuItems[item].classList.remove("without-role");
-                this.menuItems[item].classList.add("with-role");
             }
 
             this.menuItems[item].addEventListener("blur", this.handleMenuItemFocus);
